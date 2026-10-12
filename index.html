@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the Peak Plate app: what the AI plate scanner does with your photo, what stays on your device, and how to contact us.">
+  <title>Peak Plate Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafaf7;
+      --fg: #1f2328;
+      --muted: #59636e;
+      --rule: #d9dde3;
+      --accent: #2f6f4f;
+      --mark-bg: #fff3b0;
+      --mark-fg: #3b2f00;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14171a;
+        --fg: #e6e9ec;
+        --muted: #9aa4ae;
+        --rule: #2c3238;
+        --accent: #7fc8a0;
+        --mark-bg: #4a3f0a;
+        --mark-fg: #fff3b0;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 16px 64px;
+    }
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 1.9rem;
+      line-height: 1.2;
+      margin: 0 0 6px;
+      letter-spacing: -0.01em;
+    }
+    .subtitle {
+      margin: 0 0 14px;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .meta span + span::before {
+      content: "\00b7";
+      margin: 0 8px;
+    }
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin: 32px 0 8px;
+      color: var(--accent);
+    }
+    p { margin: 0 0 16px; }
+    mark {
+      background: var(--mark-bg);
+      color: var(--mark-fg);
+      padding: 0 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    @media (max-width: 480px) {
+      body { font-size: 16px; }
+      main { padding-top: 28px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Peak Plate Privacy Policy</h1>
+      <p class="subtitle">The plate scanner and your data</p>
+      <p class="meta">
+        <span>Last updated: 12 October 2026</span>
+        <span>Effective for app version 1.0</span>
+      </p>
+    </header>
+
+    <h2 id="overview">Overview</h2>
+    <p>Peak Plate is designed so that your information stays with you. Your meal plans, the meals you log, your stats and your calorie goals are stored only on your device and are never uploaded to us or to anyone else. The app has no accounts, does not ask for your name, email or contacts, does not use your location, and contains no advertising, analytics or tracking software.</p>
+
+    <h2 id="plate-scanner">The plate scanner</h2>
+    <p>The AI plate scanner is the one feature that sends data off your device. When you choose to scan a plate, the photo is sent over an encrypted connection to Peak Plate's own server (a Supabase Edge Function hosted in Amazon Web Services, US East), which forwards it to Anthropic's Claude API to estimate what is on the plate and how many calories it contains. We do not store your photo: it is processed in memory and discarded as soon as the result is returned. Our server logs record only processing times and token counts, never the image.</p>
+
+    <h2 id="anthropic">AI processing by Anthropic</h2>
+    <p>Anthropic processes the photo as our service provider under its commercial API terms. It does not use your photo to train its models. It may keep the data for a limited period, currently up to 30 days, solely to monitor for abuse and safety, after which it is deleted.</p>
+
+    <h2 id="on-device-preview">On-device preview</h2>
+    <p>A small preview thumbnail of the scanned photo (about 192 pixels) is saved on your device next to the diary entry so you can recognise the meal later. It is deleted when you delete the entry or when the entry ages out of the seven-day diary history.</p>
+
+    <h2 id="install-identifier">Install identifier and rate limiting</h2>
+    <p>To keep the scanner fair and affordable, each installation of Peak Plate generates a random identifier (a UUID) that is not tied to your device, your identity or any account. It is sent with each scan only so we can enforce the limit of 15 scans per day. Our server also keeps a hashed (one-way scrambled) form of your network address for up to seven days to prevent abuse. Neither can be used to identify you, and neither is shared with anyone.</p>
+
+    <h2 id="in-app-purchases">In-app purchases</h2>
+    <p>Peak Plate may offer optional subscriptions in a future version. When offered, purchases are processed by Apple (App Store) or Google (Google Play) and managed through RevenueCat, and Peak Plate never receives your card or payment details. Purchase records are tied only to the anonymous install identifier described above, not to your name, email or any account.</p>
+
+    <h2 id="choices-and-contact">Your choices and contact</h2>
+    <p>Because we keep no personal data about you, there is nothing for us to delete on request; uninstalling the app removes everything stored on your device. If you have questions about this policy, contact us at <mark>[contact email]</mark>.</p>
+
+    <h2 id="changes">Changes</h2>
+    <p>We will update this page if the scanner's data handling changes.</p>
+
+    <footer>
+      <p>Peak Plate privacy policy. Last updated 12 October 2026.</p>
+    </footer>
+  </main>
+</body>
+</html>
