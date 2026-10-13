@@ -110,10 +110,10 @@
     <p>Peak Plate is designed so that your information stays with you. Your meal plans, the meals you log, your stats and your calorie goals are stored only on your device and are never uploaded to us or to anyone else. The app has no accounts, does not ask for your name, email or contacts, does not use your location, and contains no advertising, analytics or tracking software.</p>
 
     <h2 id="plate-scanner">The plate scanner</h2>
-    <p>The AI plate scanner is the one feature that sends data off your device. When you choose to scan a plate, the photo is sent over an encrypted connection to Peak Plate's own server (a Supabase Edge Function hosted in Amazon Web Services, US East), which forwards it to Anthropic's Claude API to estimate what is on the plate and how many calories it contains. We do not store your photo: it is processed in memory and discarded as soon as the result is returned. Our server logs record only processing times and token counts, never the image.</p>
+    <p>The AI plate scanner is the one feature that sends data off your device. When you choose to scan a plate, the photo is sent over an encrypted connection to Peak Plate's own server, hosted in the United States, which forwards it to a third-party artificial-intelligence service to estimate what is on the plate and how many calories it contains. We do not store your photo: it is processed in memory and discarded as soon as the result is returned. Our server logs record only processing times and token counts, never the image.</p>
 
-    <h2 id="anthropic">AI processing by Anthropic</h2>
-    <p>Anthropic processes the photo as our service provider under its commercial API terms. It does not use your photo to train its models. It may keep the data for a limited period, currently up to 30 days, solely to monitor for abuse and safety, after which it is deleted.</p>
+    <h2 id="ai-processing">AI processing by our service provider</h2>
+    <p>The AI service provider processes the photo on our behalf under its commercial terms. It does not use your photo to train its models. It may keep the data for a limited period, currently up to 30 days, solely to monitor for abuse and safety, after which it is deleted.</p>
 
     <h2 id="on-device-preview">On-device preview</h2>
     <p>A small preview thumbnail of the scanned photo (about 192 pixels) is saved on your device next to the diary entry so you can recognise the meal later. It is deleted when you delete the entry or when the entry ages out of the seven-day diary history.</p>
@@ -122,10 +122,10 @@
     <p>To keep the scanner fair and affordable, each installation of Peak Plate generates a random identifier (a UUID) that is not tied to your device, your identity or any account. It is sent with each scan only so we can enforce the limit of 15 scans per day. Our server also keeps a hashed (one-way scrambled) form of your network address for up to seven days to prevent abuse. Neither can be used to identify you, and neither is shared with anyone.</p>
 
     <h2 id="in-app-purchases">In-app purchases</h2>
-    <p>Peak Plate may offer optional subscriptions in a future version. When offered, purchases are processed by Apple (App Store) or Google (Google Play) and managed through RevenueCat, and Peak Plate never receives your card or payment details. Purchase records are tied only to the anonymous install identifier described above, not to your name, email or any account.</p>
+    <p>Peak Plate may offer optional subscriptions in a future version. When offered, purchases are processed by Apple (App Store) or Google (Google Play) and managed through a third-party subscription service, and Peak Plate never receives your card or payment details. Purchase records are tied only to the anonymous install identifier described above, not to your name, email or any account.</p>
 
     <h2 id="choices-and-contact">Your choices and contact</h2>
-    <p>Because we keep no personal data about you, there is nothing for us to delete on request; uninstalling the app removes everything stored on your device. If you have questions about this policy, contact us at <mark>[contact email]</mark>.</p>
+    <p>Because we keep no personal data about you, there is nothing for us to delete on request; uninstalling the app removes everything stored on your device. If you have questions about this policy, contact us at <a href="mailto:info@designares.com">info@designares.com</a>.</p>
 
     <h2 id="changes">Changes</h2>
     <p>We will update this page if the scanner's data handling changes.</p>
