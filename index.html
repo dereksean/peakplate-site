@@ -101,7 +101,7 @@
       <h1>Peak Plate Privacy Policy</h1>
       <p class="subtitle">The plate scanner and your data</p>
       <p class="meta">
-        <span>Last updated: 12 October 2026</span>
+        <span>Last updated: 14 October 2026</span>
         <span>Effective for app version 1.0</span>
       </p>
     </header>
@@ -119,7 +119,10 @@
     <p>A small preview thumbnail of the scanned photo (about 192 pixels) is saved on your device next to the diary entry so you can recognise the meal later. It is deleted when you delete the entry or when the entry ages out of the seven-day diary history.</p>
 
     <h2 id="install-identifier">Install identifier and rate limiting</h2>
-    <p>To keep the scanner fair and affordable, each installation of Peak Plate generates a random identifier (a UUID) that is not tied to your device, your identity or any account. It is sent with each scan only so we can enforce the limit of 15 scans per day. Our server also keeps a hashed (one-way scrambled) form of your network address for up to seven days to prevent abuse. Neither can be used to identify you, and neither is shared with anyone.</p>
+    <p>To keep the scanner fair and affordable, each installation of Peak Plate generates a random identifier (a UUID) that is not tied to your device, your identity or any account. It is sent with each scan only so we can enforce the scanner's usage limits. Our server also keeps a hashed (one-way scrambled) form of your network address for up to seven days to prevent abuse. Neither can be used to identify you, and neither is shared with anyone.</p>
+
+    <h2 id="app-integrity">App integrity checks</h2>
+    <p>Before a scan, the app asks the platform it runs on (Google Play services on Android, Apple's App Attest on iOS) to confirm that it is a genuine, unmodified copy of Peak Plate. This produces a short-lived token that is sent with the scan request so that only the real app can use the scanner. The token contains no personal data; the platform may process device-integrity signals and an anonymous app-installation identifier to issue it. We do not use this for analytics or tracking.</p>
 
     <h2 id="in-app-purchases">In-app purchases</h2>
     <p>Peak Plate may offer optional subscriptions in a future version. When offered, purchases are processed by Apple (App Store) or Google (Google Play) and managed through a third-party subscription service, and Peak Plate never receives your card or payment details. Purchase records are tied only to the anonymous install identifier described above, not to your name, email or any account.</p>
@@ -131,7 +134,7 @@
     <p>We will update this page if the scanner's data handling changes.</p>
 
     <footer>
-      <p>Peak Plate privacy policy. Last updated 12 October 2026.</p>
+      <p>Peak Plate privacy policy. Last updated 14 October 2026.</p>
     </footer>
   </main>
 </body>
