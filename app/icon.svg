@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect width="100" height="100" rx="22" fill="#0F6E56"/>
+  <!-- Outer plate ring -->
+  <circle cx="50" cy="52" r="30" fill="none" stroke="#9FE1CB" stroke-width="2.5"/>
+  <!-- Inner plate ring -->
+  <circle cx="50" cy="52" r="20" fill="none" stroke="#9FE1CB" stroke-width="1.5" opacity="0.5"/>
+  <!-- Mountain peak outline -->
+  <path d="M38 54 L50 36 L62 54" fill="none" stroke="#9FE1CB" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Snow cap -->
+  <path d="M45 45 L50 36 L55 45" fill="#9FE1CB" opacity="0.6"/>
+</svg>

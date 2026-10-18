@@ -1,0 +1,260 @@
+/* Shared styles for the Peak Plate app pages (index.html and coach.html). */
+:root {
+  color-scheme: light dark;
+  --bg: #f4f1eb;
+  --fg: #282828;
+  --muted: #555555;
+  --card: #ffffff;
+  --rule: #e2ddd2;
+  --accent: #0f6e56;
+  --band: #0f6e56;
+  --band-fg: #ffffff;
+  --band-soft: #e1f5ee;
+  --band-mint: #9fe1cb;
+  --chip: rgba(255, 255, 255, 0.14);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111816;
+    --fg: #e8ece9;
+    --muted: #a3ada8;
+    --card: #18211e;
+    --rule: #2a3531;
+    --accent: #7fd3b4;
+    --band: #0b4f3e;
+    --band-fg: #ffffff;
+    --band-soft: #d4efe5;
+    --band-mint: #9fe1cb;
+    --chip: rgba(255, 255, 255, 0.10);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--band-mint);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Hero band */
+.hero {
+  background: var(--band);
+  color: var(--band-fg);
+  padding: 20px 0 48px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 36px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+.brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3); }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--band-mint);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+h1 {
+  margin: 0 0 16px;
+  font-size: 2.6rem;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.lead {
+  margin: 0 0 22px;
+  font-size: 1.12rem;
+  color: var(--band-soft);
+  max-width: 34em;
+}
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+}
+.facts li {
+  background: var(--chip);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 12px;
+}
+.badges a { display: inline-block; line-height: 0; border-radius: 8px; }
+.badges img { height: 48px; width: auto; }
+.small-print {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--band-soft);
+}
+
+/* Scanner clip (a still until the 15-second clip is ready) */
+.clip {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 280px;
+}
+.clip img, .clip video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  background: #0a3f32;
+}
+
+/* Content */
+main section { padding: 44px 0 4px; }
+h2 {
+  margin: 0 0 18px;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cards li {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+.cards h3 { margin: 0 0 6px; font-size: 1.08rem; }
+.cards p { margin: 0; color: var(--muted); }
+.coach-note {
+  margin: 18px 0 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--accent);
+  background: var(--card);
+  border-radius: 0 12px 12px 0;
+}
+.faq details {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  margin: 0 0 10px;
+}
+.faq summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  font-weight: 650;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.faq details[open] summary::after { content: "\2212"; }
+.faq details > div { padding: 0 20px 14px; }
+.faq details p { margin: 0 0 10px; }
+.faq details p:last-child { margin-bottom: 0; }
+.support p { margin: 0 0 12px; }
+footer {
+  margin-top: 48px;
+  border-top: 1px solid var(--rule);
+  padding: 22px 0 40px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+footer p { margin: 0 0 8px; }
+footer nav a { margin-right: 16px; }
+footer .disclaimer { margin-top: 14px; }
+
+@media (min-width: 760px) {
+  .hero { padding: 24px 0 64px; }
+  .hero-grid { grid-template-columns: 1fr 280px; gap: 56px; }
+  h1 { font-size: 3.2rem; }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 420px) {
+  body { font-size: 16px; }
+  h1 { font-size: 2.2rem; }
+  .badges img { height: 44px; }
+}
+
+/* Coach page */
+.hero-compact { padding-bottom: 40px; }
+.hero-compact h1 { max-width: 16em; }
+.brand a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.prose { max-width: 720px; }
+.prose ul, .prose ol { padding-left: 1.3em; margin: 0 0 16px; }
+.prose li { margin: 0 0 10px; }
+.prose p { margin: 0 0 14px; }
+.offer {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 20px 22px 6px;
+}
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1px 7px;
+}
+.share-link { overflow-wrap: anywhere; }
+.coach-badges { margin: 4px 0 14px; }
+.note { color: var(--muted); font-size: 0.95rem; }
+
+@media print {
+  :root { color-scheme: light; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .hero { background: none; color: #000; padding: 0 0 8px; }
+  .eyebrow, .lead, .small-print { color: #333; }
+  .brand img { border: 1px solid #ccc; }
+  main section { padding-top: 14px; }
+  .offer, .cards li { border-color: #bbb; }
+  a { color: #000; }
+  footer nav { display: none; }
+}
